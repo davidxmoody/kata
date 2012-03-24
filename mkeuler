@@ -1,0 +1,17 @@
+#!/bin/bash
+
+max=0
+
+for file in euler*.py; do
+    if [[ -f "$file" ]]; then 
+        file="${file#euler}"
+        file="${file%.py}"
+        if (( file > max )); then
+            max="$file"
+        fi
+    fi
+done
+
+let max++
+
+echo "euler${max}.py"
