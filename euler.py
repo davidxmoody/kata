@@ -25,3 +25,10 @@ def primes_below_efficient(num=1000000000):
         if not divisible:
             primes.append(i)
             yield i
+
+
+def prod(xs):
+    total = 1
+    for x in xs:
+        total *= x
+    return total
