@@ -14,5 +14,12 @@ done
 
 let max++
 
-touch "euler${max}.py"
+mkpython () 
+{ 
+    touch "$@" && chmod +x "$@" && { 
+        echo '#!/usr/bin/env python3' | tee -a "$@" > /dev/null
+    }
+}
+
+mkpython "euler${max}.py"
 vim "euler${max}.py"
