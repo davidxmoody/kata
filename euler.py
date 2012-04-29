@@ -2,6 +2,29 @@
 
 from math import sqrt
 
+prime_list = [2, 3]
+highest_tried = 3
+
+def build_prime_list(limit):
+    global highest_tried
+    for i in range(highest_tried+2, limit+1, 2):
+        sqrti = sqrt(i)
+        divisible = False
+        for p in prime_list:
+            if p > sqrti: 
+                break
+            if i%p==0:
+                divisible = True
+                break
+        if not divisible:
+            prime_list.append(i)
+        highest_tried = i
+
+def is_prime(num):
+    if num > highest_tried:
+        build_prime_list(num)
+    return num in prime_list
+
 def primes_below(num=1000000000):
     primes = [2]
     yield 2
