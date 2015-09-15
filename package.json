@@ -1,0 +1,18 @@
+{
+  "name": "diamond",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "main": "diamond.js",
+  "dependencies": {
+    "babel": "^5.8.23",
+    "ramda": "^0.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node diamond.js"
+  },
+  "author": "David Moody <david@davidxmoody.com> (https://davidxmoody.com/)",
+  "license": "MIT"
+}
